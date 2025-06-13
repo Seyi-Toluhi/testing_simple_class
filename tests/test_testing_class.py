@@ -12,6 +12,12 @@ def test_high_value_initiation():
 test that when we call get_highest method 
 value_first is returned if its the highest value
 """
+
+def test_get_value_first_if_highest():
+    high_value = HighValue(10,8)
+    actual = high_value.get_highest()
+    assert actual == 'First value is higher'
+
 """
 test that when we call get_highest method 
 value_second is returned if its the highest value
