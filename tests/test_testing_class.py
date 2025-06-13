@@ -41,7 +41,20 @@ def test_get_value_if_values_equal():
 test that when we call add method 
 value_first is returned if we increment it to make it higher
 """
+
+def test_add_method_returns_first_value_when_incremented():
+    high_value = HighValue(3, 3)
+    high_value.add(2,'first')
+    actual = high_value.get_highest()
+    assert actual == 'First value is higher'
+
 """
 test that when we call add method 
 value_second is returned if we increment it to make it higher
 """
+
+def test_add_method_returns_second_value_when_incremented():
+    high_value = HighValue(3, 3)
+    high_value.add(5,'second')
+    actual = high_value.get_highest()
+    assert actual == 'Second value is higher'
