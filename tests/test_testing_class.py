@@ -22,10 +22,21 @@ def test_get_value_first_if_highest():
 test that when we call get_highest method 
 value_second is returned if its the highest value
 """
+def test_get_value_second_if_highest():
+    high_value = HighValue(3, 520)
+    actual = high_value.get_highest()
+    assert actual == 'Second value is higher'
+
 """
 test that when we call get_highest method 
 "values are equal" is returned if equal
 """
+
+def test_get_value_if_values_equal():
+    high_value = HighValue(3, 3)
+    actual = high_value.get_highest()
+    assert actual == 'Values are equal'
+
 """
 test that when we call add method 
 value_first is returned if we increment it to make it higher
